@@ -1,34 +1,30 @@
-# Gold Stream 
+# 🎬 Movie Review  
 
-**Gold Stream** is a modern **Full Stack Movie Discovery Platform** featuring trailers, reviews, and watchlists with a cinematic UI.
-Built with **React**, **Spring Boot**, **MongoDB**, and **Tailwind CSS**, it delivers a seamless movie browsing experience with robust backend services.
+**Movie Review** is a **Full Stack Movie Discovery & Review Platform** built using **React**, **Spring Boot**, and **MongoDB**.  
+It allows users to explore movies, watch trailers, post reviews, and maintain personal watchlists — all with a sleek and responsive interface powered by **Tailwind CSS**.
 
-> ⚠️ **Note:** The frontend is deployed on **Vercel**, and the backend is hosted on **Render**. Due to backend cold starts on Render, initial site load may take up to **10 seconds**.
->
-> ✨ **Sample data** is preloaded into the database. Check the `backend/sample-data` folder for more info.
->
-> 🗃️ **MongoDB Atlas** is used for database hosting and is already integrated with the backend.
-
----
+--
 
 ## 🚀 Features
 
-* 🎥 **Watch Trailers** – Stream movie trailers seamlessly
-* 📝 **Reviews** – Read & post reviews with a clean UI
-* 📋 **Watchlist** – Save movies to your personal list
-* ⚡ **Responsive UI** – Optimized for all devices
-* 🌈 **Tailwind CSS Integration** – Utility-first custom styling with animations
-* 💃 **Fallback & Loading States** – Smooth user experience
+- 🎞️ **Watch Trailers** — Stream movie trailers with smooth playback  
+- 🗒️ **User Reviews** — Read, write, and manage reviews easily  
+- 📋 **Watchlist** — Save your favorite movies for later  
+- 📱 **Fully Responsive** — Works beautifully on mobile, tablet, and desktop  
+- 🎨 **Tailwind CSS Styling** — Clean UI with custom animations  
+- ⚡ **Fast & Seamless Experience** — Optimized loading and state handling  
 
 ---
 
-## 🚧 Tech Stack
+## 🧠 Tech Stack
 
-* **Frontend:** React, React Router DOM, Tailwind CSS, Bootstrap, MUI
-* **Icons:** FontAwesome, MUI Icons
-* **HTTP Client:** Axios
-* **Backend:** Spring Boot (Java)
-* **Database:** MongoDB (Hosted on MongoDB Atlas)
+| Layer | Technologies |
+|:------|:--------------|
+| **Frontend** | React, React Router DOM, Tailwind CSS, MUI, Bootstrap |
+| **Backend** | Spring Boot (Java) |
+| **Database** | MongoDB (MongoDB Atlas) |
+| **Icons** | FontAwesome, MUI Icons |
+| **HTTP Client** | Axios |
 
 ---
 
@@ -51,7 +47,7 @@ Built with **React**, **Spring Boot**, **MongoDB**, and **Tailwind CSS**, it del
 |-- api
 |   |-- axios.js
 /backend
-|-- src/main/java/com/goldstream/api
+|-- src/main/java/com/moviereview/api
 |   |-- controllers
 |   |-- services
 |   |-- models
@@ -63,96 +59,39 @@ Built with **React**, **Spring Boot**, **MongoDB**, and **Tailwind CSS**, it del
 
 ---
 
-## 🗖 Setup & Installation
+## ⚙️ Setup & Installation
 
-### Frontend
+### 🖥️ Frontend Setup
 
-1. **Clone the repo:**
+1. **Clone this repository**
+   ```bash
+   git clone https://github.com/<your-username>/movie-review.git
+   cd movie-review/frontend
+   ```
 
-```bash
-git clone https://github.com/Skywalker690/gold-stream.git
-cd gold-stream/frontend
-```
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-2. **Install dependencies:**
-
-```bash
-npm install
-```
-
-3. **Start the app:**
-
-```bash
-npm start
-```
-
-### Backend
-
-1. Navigate to the backend folder:
-
-```bash
-cd ../backend
-```
-
-2. Run the Spring Boot application:
-
-```bash
-./mvnw spring-boot:run
-```
+3. **Start the app**
+   ```bash
+   npm start
+   ```
 
 ---
 
+### ⚙️ Backend Setup
 
-## 🌈 API Configuration with Ngrok
+1. Move to backend folder:
+   ```bash
+   cd ../backend
+   ```
 
-### Start your backend with ngrok:
+2. Start the Spring Boot server:
+   ```bash
+   ./mvnw spring-boot:run
+   ```
 
-```bash
-ngrok http 8080
-```
 
-Example ngrok URL:
 
-```
-https://abcd1234.ngrok.io
-```
-
-### Create central Axios instance:
-
-In `/frontend/src/api/axios.js`
-
-```javascript
-import axios from 'axios';
-
-const API_BASE_URL = 'https://abcd1234.ngrok.io'; // Replace with your ngrok URL
-
-const api = axios.create({
-  baseURL: API_BASE_URL,
-  headers: {
-    'Content-Type': 'application/json'
-  }
-});
-
-export default api;
-```
-
----
-
-## 🌍 Live Demo
-
-[**Visit Gold Stream Live**](https://gold-stream-two.vercel.app/)
-
----
-
-## 📚 License
-
-This project is **MIT Licensed**.
-
----
-
-## 🌟 Credits
-
-* UI/UX Inspired by modern cinema apps
-* API Data powered by **The Movie Database (TMDB)**
-* UI/UX Inspired by modern cinema apps
-* Developed by **Sanjo**
